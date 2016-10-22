@@ -2,4 +2,59 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.xxzx.cxhk.dao.extend.CreditInfoExtendMapper" >
 
+
+    <sql id="whereOfGetCreditInfoList">
+        <where>
+
+            <if test="community!= null and community!=''">
+                and h.community like CONCAT('%',#{community},'%')
+            </if>
+
+            <if test="mobile!= null and mobile!=''">
+                and h.mobile =#{mobile}
+            </if>
+
+            <!--<if test="beginDate !=null ">-->
+            <!--and h.date_format(createDate,"%Y-%m-%d %T")-->
+            <!--&gt;=#{beginDate}-->
+            <!--</if>-->
+            <!--<if test="endDate !=null ">-->
+            <!--and h.date_format(createDate,"%Y-%m-%d-->
+            <!--%T")&lt;=#{endDate}-->
+            <!--</if>-->
+            <!--<if test="available != null">-->
+            <!--&lt;!&ndash; and h.available = #{available} &ndash;&gt;-->
+            <!--</if>-->
+
+            <!--<if test="areaId!= 0">-->
+            <!--and (a.treepath LIKE CONCAT('%,',#{area_id},',%')  OR a.id=#{area_id})-->
+            <!--</if>-->
+
+        </where>
+
+    </sql>
+
+    <select id="getCreditList" parameterType="com.xxzx.cxhk.dto.request.GetCreditInfoListRequest"
+            resultType="com.xxzx.cxhk.entity.CreditInfo">
+        select c.* from t_credit_info c
+        <include refid="whereOfGetCreditInfoList" />
+        <if test="sort!=null and sort!=''">
+            order by h.${sort}
+            <if test="order!=null and order!=''">
+                ${order}
+            </if>
+        </if>
+        <if test="sort==null">
+            order by h.id DESC
+        </if>
+        <if test="pageOffset >= 0 and pageSize>0">
+            limit #{pageOffset} , #{pageSize}
+        </if>
+    </select>
+
+    <select id="getCreditInfoListCount" parameterType="com.xxzx.cxhk.dto.request.GetCreditInfoListRequest" resultType="int">
+        select  count(*)  from t_credit_info c
+        <include refid="whereOfGetCreditInfoList" />
+    </select>
+
 </mapper>
