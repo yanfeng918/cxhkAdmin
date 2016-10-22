@@ -37,21 +37,21 @@
         <!--selectByExampleQueryId="false"-->
 
         <!--生成对应表及类名-->
-        <table tableName="t_info" domainObjectName="Info">
+        <table tableName="t_credit_info" domainObjectName="CreditInfo">
             <!--<property name="useActualColumnNames" value="true"/>-->
         </table>
 
-        <table tableName="t_affair_category" domainObjectName="AffairCategory">
-        </table>
+        <!--<table tableName="t_affair_category" domainObjectName="AffairCategory">-->
+        <!--</table>-->
 
-        <table tableName="t_government" domainObjectName="Government">
-        </table>
+        <!--<table tableName="t_government" domainObjectName="Government">-->
+        <!--</table>-->
 
-        <table tableName="t_template_attribute" domainObjectName="TemplateAttribute">
-        </table>
+        <!--<table tableName="t_template_attribute" domainObjectName="TemplateAttribute">-->
+        <!--</table>-->
 
-        <table tableName="t_template_attribute_option" domainObjectName="TemplateAttributeOption">
-        </table>
+        <!--<table tableName="t_template_attribute_option" domainObjectName="TemplateAttributeOption">-->
+        <!--</table>-->
 
 
     </context>

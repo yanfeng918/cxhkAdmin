@@ -1,4 +1,4 @@
-package com.xxzx.cxhk.common.dto;
+package com.xxzx.cxhk.dto;
 
 /**
  * Created by yanfeng on 2016/6/12.
