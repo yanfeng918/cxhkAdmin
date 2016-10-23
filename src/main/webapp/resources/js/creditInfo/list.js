@@ -46,22 +46,18 @@ var createDateTables = function () {
 		},
 		"columns": [
 			{"data": "name"},
-			{"data": "infoType"},
+			{"data": "affairCategoryId"},
 			{"data": "modifyDate",
 				"render" : function(data,type, row, meta) {
 					return new Date(parseInt(data)).format("yyyy-MM-dd hh:mm");
 				}
 			},
 
-			{"data": "modifyId"},
+			{"data": "modifyPersonId"},
 			{"data": "status"},
-			{"data": null, className: "td-operation  text-center", orderable: false, width: "15%", defaultContent: ""}
-		],
-		"createdRow": function (row, data, index) {
-			//不使用【render】，改用jquery文档操作呈现单元格  data.id
-			var $btnEdit = $('<button type="button" class="btn btn-small btn-primary btn-edit" onclick="queryData(' + data.id + ')">查看数据</button>');
-			$('td', row).eq(7).append($btnEdit);
-		}
+			{"data": "checkPersonId"}
+		]
+
 	});
 	return table;
 }

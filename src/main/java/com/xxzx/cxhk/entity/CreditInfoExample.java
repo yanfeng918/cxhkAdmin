@@ -375,63 +375,63 @@ public class CreditInfoExample {
             return (Criteria) this;
         }
 
-        public Criteria andInfoTypeIsNull() {
-            addCriterion("info_type is null");
+        public Criteria andAffairCategoryIdIsNull() {
+            addCriterion("affair_category_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andInfoTypeIsNotNull() {
-            addCriterion("info_type is not null");
+        public Criteria andAffairCategoryIdIsNotNull() {
+            addCriterion("affair_category_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andInfoTypeEqualTo(Short value) {
-            addCriterion("info_type =", value, "infoType");
+        public Criteria andAffairCategoryIdEqualTo(Integer value) {
+            addCriterion("affair_category_id =", value, "affairCategoryId");
             return (Criteria) this;
         }
 
-        public Criteria andInfoTypeNotEqualTo(Short value) {
-            addCriterion("info_type <>", value, "infoType");
+        public Criteria andAffairCategoryIdNotEqualTo(Integer value) {
+            addCriterion("affair_category_id <>", value, "affairCategoryId");
             return (Criteria) this;
         }
 
-        public Criteria andInfoTypeGreaterThan(Short value) {
-            addCriterion("info_type >", value, "infoType");
+        public Criteria andAffairCategoryIdGreaterThan(Integer value) {
+            addCriterion("affair_category_id >", value, "affairCategoryId");
             return (Criteria) this;
         }
 
-        public Criteria andInfoTypeGreaterThanOrEqualTo(Short value) {
-            addCriterion("info_type >=", value, "infoType");
+        public Criteria andAffairCategoryIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("affair_category_id >=", value, "affairCategoryId");
             return (Criteria) this;
         }
 
-        public Criteria andInfoTypeLessThan(Short value) {
-            addCriterion("info_type <", value, "infoType");
+        public Criteria andAffairCategoryIdLessThan(Integer value) {
+            addCriterion("affair_category_id <", value, "affairCategoryId");
             return (Criteria) this;
         }
 
-        public Criteria andInfoTypeLessThanOrEqualTo(Short value) {
-            addCriterion("info_type <=", value, "infoType");
+        public Criteria andAffairCategoryIdLessThanOrEqualTo(Integer value) {
+            addCriterion("affair_category_id <=", value, "affairCategoryId");
             return (Criteria) this;
         }
 
-        public Criteria andInfoTypeIn(List<Short> values) {
-            addCriterion("info_type in", values, "infoType");
+        public Criteria andAffairCategoryIdIn(List<Integer> values) {
+            addCriterion("affair_category_id in", values, "affairCategoryId");
             return (Criteria) this;
         }
 
-        public Criteria andInfoTypeNotIn(List<Short> values) {
-            addCriterion("info_type not in", values, "infoType");
+        public Criteria andAffairCategoryIdNotIn(List<Integer> values) {
+            addCriterion("affair_category_id not in", values, "affairCategoryId");
             return (Criteria) this;
         }
 
-        public Criteria andInfoTypeBetween(Short value1, Short value2) {
-            addCriterion("info_type between", value1, value2, "infoType");
+        public Criteria andAffairCategoryIdBetween(Integer value1, Integer value2) {
+            addCriterion("affair_category_id between", value1, value2, "affairCategoryId");
             return (Criteria) this;
         }
 
-        public Criteria andInfoTypeNotBetween(Short value1, Short value2) {
-            addCriterion("info_type not between", value1, value2, "infoType");
+        public Criteria andAffairCategoryIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("affair_category_id not between", value1, value2, "affairCategoryId");
             return (Criteria) this;
         }
 

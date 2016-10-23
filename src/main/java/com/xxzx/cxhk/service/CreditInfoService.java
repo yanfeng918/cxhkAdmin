@@ -2,6 +2,7 @@ package com.xxzx.cxhk.service;
 
 import com.xxzx.cxhk.bean.Pager;
 import com.xxzx.cxhk.dto.request.GetCreditInfoListRequest;
+import com.xxzx.cxhk.dto.response.GetCreditInfoListResponse;
 import com.xxzx.cxhk.entity.CreditInfo;
 import com.xxzx.cxhk.entity.Info;
 
@@ -15,7 +16,7 @@ public interface CreditInfoService {
      * @param request
      * @return
      */
-    Pager<CreditInfo> list(GetCreditInfoListRequest request);
+    Pager<GetCreditInfoListResponse> list(GetCreditInfoListRequest request);
 
 
 

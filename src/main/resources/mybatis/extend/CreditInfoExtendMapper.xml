@@ -35,8 +35,9 @@
     </sql>
 
     <select id="getCreditList" parameterType="com.xxzx.cxhk.dto.request.GetCreditInfoListRequest"
-            resultType="com.xxzx.cxhk.entity.CreditInfo">
-        select c.* from t_credit_info c
+            resultType="com.xxzx.cxhk.dto.response.GetCreditInfoListResponse">
+        select c.id,c.name,c.modify_date modifyDate,c.check_id checkPersonId,c.modify_id modifyPersonId from t_credit_info c
+        left join t_affair_category ac on c.affair_category_id =ac.id
         <include refid="whereOfGetCreditInfoList" />
         <if test="sort!=null and sort!=''">
             order by c.${sort}
