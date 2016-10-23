@@ -105,7 +105,7 @@
 						</div>
 					</div>
 				</li>
-				<div class="copyrights">Collect from <a href="http://www.mycodes.net/" target="_blank">源码之家</a></div>
+				<div class="copyrights">Collect from <a href="http://www.mycodes.net/" target="_blank"></a></div>
 				<li class="notification-dropdown hidden-phone">
 					<a href="#" class="trigger">
 						<i class="icon-envelope-alt"></i>
@@ -194,42 +194,65 @@
 			<li>
 				<a class="dropdown-toggle" href="#">
 					<i class="icon-group"></i>
-					<span>房源</span>
+					<span>信息归集</span>
 					<i class="icon-chevron-down"></i>
 				</a>
 				<ul class="submenu">
 					<li>
-						<a href="houseInfoValid/list" target="iframe">有效房源</a>
+						<a href="creditInfo/list" target="iframe">信息管理</a>
 					</li>
 					<li>
-						<a href="houseInfoValid/uploadPage" target="iframe">有效房源导入</a>
-					</li>
-					<%--<li>--%>
-						<%--<a href="houseInfoCheckWait/edit" target="iframe">爬虫房源</a>--%>
-					<%--</li>--%>
-					<li>
-						<a href="houseInfoNew/list" target="iframe">最新房源</a>
+						<a href="houseInfoValid/uploadPage" target="iframe">操作审核</a>
 					</li>
 					<li>
-						<a href="houseInfoNew/uploadPage" target="iframe">最新房源导入</a>
+						<a href="houseInfoNew/list" target="iframe">类别模板</a>
 					</li>
 					<li>
-						<a href="houseInfoProperty/list" target="iframe">物业房源</a>
+						<a href="houseInfoNew/uploadPage" target="iframe">数据字典</a>
 					</li>
 					<li>
-						<a href="houseInfoProperty/uploadPage" target="iframe">物业房源导入</a>
+						<a href="houseInfoProperty/list" target="iframe">审核设置</a>
 					</li>
 				</ul>
 			</li>
+
 			<li>
 				<a class="dropdown-toggle" href="#">
 					<i class="icon-edit"></i>
-					<span>财务管理</span>
+					<span>异议处理</span>
 					<i class="icon-chevron-down"></i>
 				</a>
 				<ul class="submenu">
 					<li>
-						<a href="recharge/list" target="iframe">充值管理</a>
+						<a href="recharge/list" target="iframe">管理</a>
+					</li>
+				</ul>
+			</li>
+
+
+			<li>
+				<a class="dropdown-toggle" href="#">
+					<i class="icon-edit"></i>
+					<span>查询管理</span>
+					<i class="icon-chevron-down"></i>
+				</a>
+				<ul class="submenu">
+					<li>
+						<a href="recharge/list" target="iframe">管理</a>
+					</li>
+				</ul>
+			</li>
+
+
+			<li>
+				<a class="dropdown-toggle" href="#">
+					<i class="icon-edit"></i>
+					<span>数据统计</span>
+					<i class="icon-chevron-down"></i>
+				</a>
+				<ul class="submenu">
+					<li>
+						<a href="recharge/list" target="iframe">管理</a>
 					</li>
 				</ul>
 			</li>

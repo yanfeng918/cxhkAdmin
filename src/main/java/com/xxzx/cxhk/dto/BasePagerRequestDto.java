@@ -18,7 +18,7 @@ public class BasePagerRequestDto {
 
     private String property;// 查找属性名称
     private String keyword;// 查找关键字
-    private String sort = "createDate";// 排序字段
+    private String sort = "create_date";// 排序字段
     private String order = "desc";// 排序方式
 
 

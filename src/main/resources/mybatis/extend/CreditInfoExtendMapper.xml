@@ -7,11 +7,11 @@
         <where>
 
             <if test="community!= null and community!=''">
-                and h.community like CONCAT('%',#{community},'%')
+                and c.community like CONCAT('%',#{community},'%')
             </if>
 
             <if test="mobile!= null and mobile!=''">
-                and h.mobile =#{mobile}
+                and c.mobile =#{mobile}
             </if>
 
             <!--<if test="beginDate !=null ">-->
@@ -39,13 +39,13 @@
         select c.* from t_credit_info c
         <include refid="whereOfGetCreditInfoList" />
         <if test="sort!=null and sort!=''">
-            order by h.${sort}
+            order by c.${sort}
             <if test="order!=null and order!=''">
                 ${order}
             </if>
         </if>
         <if test="sort==null">
-            order by h.id DESC
+            order by c.id DESC
         </if>
         <if test="pageOffset >= 0 and pageSize>0">
             limit #{pageOffset} , #{pageSize}

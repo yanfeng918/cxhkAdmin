@@ -21,14 +21,20 @@ public class CreditInfoController {
 	private CreditInfoService creditInfoService;
 	
 
-	@RequestMapping(value="/list")
+	@RequestMapping(value="/getList")
 	@ResponseBody
-	public Pager<Info> getList(Model model, GetCreditInfoListRequest request) {
-		Pager<Info> pager = creditInfoService.list(request);
-		List<Info> list = pager.getList();
-		Info[] data = list.toArray(new Info[list.size()]);
+	public Pager<CreditInfo> getList(Model model, GetCreditInfoListRequest request) {
+		Pager<CreditInfo> pager = creditInfoService.list(request);
+		List<CreditInfo> list = pager.getList();
+		CreditInfo[] data = list.toArray(new CreditInfo[list.size()]);
 		pager.setData(data);
 		return pager;
+	}
+
+
+	@RequestMapping(value="/list")
+	public String list() {
+		return "/creditInfo/list";
 	}
 	
 }

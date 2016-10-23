@@ -5,14 +5,8 @@
 var postUrl;
 $(function () {
 
-	var val = $("#houseType").val();
-	if (val=="valid"){
-		postUrl="../houseInfoValid/getList";
-	}else if (val=="new"){
-		postUrl="../houseInfoNew/getList";
-	}else if (val=="property"){
-		postUrl="../houseInfoProperty/getList";
-	}
+	postUrl="../creditInfo/getList";
+
 	var _table = createDateTables();
 
 	$("#searchHouseInfo").click(function () {
@@ -51,17 +45,16 @@ var createDateTables = function () {
 			}
 		},
 		"columns": [
-			{"data": "createdate",
+			{"data": "name"},
+			{"data": "infoType"},
+			{"data": "modifyDate",
 				"render" : function(data,type, row, meta) {
-							return new Date(parseInt(data)).format("yyyy-MM-dd hh:mm");
-						}
+					return new Date(parseInt(data)).format("yyyy-MM-dd hh:mm");
+				}
 			},
-			{"data": "mobile"},
-			{"data": "community"},
-			{"data": "areasize"},
-			{"data": "saleprice"},
-			{"data": "ban"},
-			{"data": "roomnumber"},
+
+			{"data": "modifyId"},
+			{"data": "status"},
 			{"data": null, className: "td-operation  text-center", orderable: false, width: "15%", defaultContent: ""}
 		],
 		"createdRow": function (row, data, index) {

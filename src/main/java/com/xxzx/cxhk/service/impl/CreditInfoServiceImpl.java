@@ -28,13 +28,13 @@ public class CreditInfoServiceImpl implements CreditInfoService {
     @Override
     public Pager<CreditInfo> list(GetCreditInfoListRequest request) {
         request.webParamConvert();
-        List<CreditInfo> houseInfoList = creditInfoExtendMapper.getCreditList(request);
-        int houseInfoListCount = creditInfoExtendMapper.getCreditListCount(request);
+        List<CreditInfo> creditInfoList = creditInfoExtendMapper.getCreditList(request);
+        int creditInfoListCount = creditInfoExtendMapper.getCreditInfoListCount(request);
         Pager<CreditInfo> pager = new Pager<CreditInfo>();
         pager.setPageNumber(request.getPageNumber());
         pager.setPageSize(request.getPageSize());
-        pager.setList(houseInfoList);
-        pager.setTotalCount(houseInfoListCount);
+        pager.setList(creditInfoList);
+        pager.setTotalCount(creditInfoListCount);
         return pager;
     }
 }
