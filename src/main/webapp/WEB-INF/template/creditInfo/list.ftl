@@ -73,20 +73,33 @@
             </th>
             <th class="col-md-3">
                 <div class="demos">
-                    <span>起止时间▼<input name="beginDate" type="text" id="beginDate" size="30" maxlength="10"
+                    <span>起止时间▼<input name="beginDate" type="text" id="beginDate" size="20" maxlength="10"
                                               onClick="new Calendar().show(this);" readonly="readonly"/>
                     </span>
-                    <span>至▼<input name="endDate" type="text" id="endDate" size="30" maxlength="10"
+                    <span>至▼<input name="endDate" type="text" id="endDate" size="20" maxlength="10"
                                            onClick="new Calendar().show(this);" readonly="readonly"/>
                     </span>
                 </div>
+            </th>
+
+            <th class="col-md-1">
+                <button class="btn btn-primary btn-lg" type="button" id="searchHouseInfo" style="position: relative;top: -34px;left: 20px;width: 81px;">搜&nbsp;索</button>
             </th>
         </tr>
 
         <tr>
             <th colspan="2" class="tool_box">
-                <button class="btn btn-primary btn-sm" type="button" id="searchHouseInfo">查&nbsp;询</button>
-                <button class="btn btn-info btn-sm" type="button" id="resetBtn">重&nbsp;置</button>
+                <!-- Single button -->
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                        信息上报 <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">单条上报</a></li>
+                        <li><a href="#">批量上报</a></li>
+                    </ul>
+                </div>
+                <button class="btn btn-info btn-sm" type="button" id="resetBtn" style="width: 81px;height: 34px;">信息导出</button>
             </th>
         </tr>
     </table>
