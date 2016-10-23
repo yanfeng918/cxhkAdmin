@@ -6,7 +6,9 @@
 
     <groupId>com.xxzx</groupId>
     <artifactId>cxhk</artifactId>
+    <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
+
 
 
 
@@ -301,7 +303,7 @@
     </profiles>
 
     <build>
-        <finalName>yfykMs</finalName>
+        <finalName>cxhk</finalName>
 
         <resources>
 
@@ -314,7 +316,7 @@
                     <exclude>config/development/*</exclude>
 
                     <exclude>log4j.properties</exclude>
-                    <exclude>yfyk.properties</exclude>
+                    <exclude>cxhk.properties</exclude>
                 </excludes>
             </resource>
 
@@ -371,7 +373,7 @@
                     <!-- http://139.196.13.240:32981/ -->
                     <url>http://114.215.252.82:32981/manager/text</url>
                     <server>tomcat</server>
-                    <path>/yfykMs</path>
+                    <path>/cxhk</path>
                     <username>admin</username>
                     <password>!UM)9=9)JD(1Ltyl</password>
                 </configuration>
